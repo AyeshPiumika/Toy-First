@@ -12,9 +12,9 @@
         android:layout_width="249dp"
         android:layout_height="53dp"
         android:layout_marginStart="158dp"
-        android:layout_marginTop="74dp"
+        android:layout_marginTop="261dp"
         android:layout_marginEnd="159dp"
-        android:background="@drawable/buttonstartup"
+        android:background="@drawable/button"
         android:onClick="viewHomePage"
         android:text="Get Start"
         android:textAlignment="center"
@@ -24,18 +24,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="401dp"
-        android:layout_height="249dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="352dp"
-        android:layout_marginEnd="5dp"
+        android:layout_width="411dp"
+        android:layout_height="326dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
-        app:srcCompat="@drawable/toyfirstlogo" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/toyfirstlg" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
