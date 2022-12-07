@@ -5,25 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context=".ToysHandling">
+    tools:context=".CategoryHandling">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnUpdateCat"
         android:layout_width="175dp"
         android:layout_height="50dp"
         android:layout_marginStart="26dp"
         android:layout_marginTop="12dp"
+        android:background="@drawable/button"
+        android:onClick="updateCategory"
         android:text="Update"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnInsertCat" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnDeleteCat"
         android:layout_width="175dp"
         android:layout_height="50dp"
         android:layout_marginStart="19dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/button"
+        android:onClick="deleteCategories"
         android:text="Delete"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnUpdateCat"
@@ -45,30 +49,34 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imgCat"
         android:layout_width="127dp"
         android:layout_height="112dp"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="44dp"
         android:elevation="3dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView7"
         app:srcCompat="@drawable/addimg" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSelectImageCat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="53dp"
         android:layout_marginStart="62dp"
-        android:layout_marginTop="111dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="30dp"
+        android:background="@drawable/buttonstartup"
+        android:onClick="selectImage"
         android:text="Select Image"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imgCat"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/txtCatName"
         android:layout_width="220dp"
         android:layout_height="48dp"
         android:layout_marginStart="95dp"
@@ -83,10 +91,10 @@
         android:textAlignment="viewStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+        app:layout_constraintTop_toBottomOf="@+id/imgCat" />
 
     <EditText
-        android:id="@+id/editTextTextMultiLine"
+        android:id="@+id/txtCatDetails"
         android:layout_width="268dp"
         android:layout_height="97dp"
         android:layout_marginStart="71dp"
@@ -101,39 +109,73 @@
         android:paddingLeft="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCatName" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnInsertCat"
         android:layout_width="175dp"
         android:layout_height="50dp"
         android:layout_marginStart="26dp"
         android:layout_marginTop="26dp"
+        android:background="@drawable/button"
+        android:onClick="insertCategory"
         android:text="Insert"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCatDetails" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnFindCat"
         android:layout_width="175dp"
         android:layout_height="50dp"
         android:layout_marginStart="19dp"
         android:layout_marginTop="26dp"
         android:layout_marginEnd="16dp"
+        android:background="@drawable/button"
+        android:onClick="findCategory"
         android:text="Find"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnInsertCat"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine" />
+        app:layout_constraintTop_toBottomOf="@+id/txtCatDetails" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnViewCat"
         android:layout_width="175dp"
         android:layout_height="50dp"
         android:layout_marginStart="118dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="118dp"
+        android:background="@drawable/button"
+        android:onClick="viewAllCategories"
         android:text="View Categories"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnUpdateCat" />
+
+    <EditText
+        android:id="@+id/txtCID"
+        android:layout_width="93dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Enter ID"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="11dp"
+        android:text="Not for insert"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/txtCID"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 </androidx.constraintlayout.widget.ConstraintLayout>

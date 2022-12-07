@@ -4,6 +4,115 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".Order">
 
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="86dp"
+        android:text="Please fill this and Confirm your Order!"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button7"
+        app:srcCompat="@drawable/paymenttype" />
+
+    <EditText
+        android:id="@+id/txtNICNO"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="87dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Your NIC Number"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <EditText
+        android:id="@+id/txtFullName"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="87dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Your NIC Full Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtNICNO" />
+
+    <EditText
+        android:id="@+id/txtAddress"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="87dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Your Permenant Address"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFullName" />
+
+    <EditText
+        android:id="@+id/txtContactNO"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="87dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Your Contact Number"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAddress" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button7"
+        android:layout_width="132dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="254dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="63dp"
+        android:background="@drawable/button"
+        android:onClick="insertOrder"
+        android:text="Confirm Order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.789"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtContactNO" />
 </androidx.constraintlayout.widget.ConstraintLayout>

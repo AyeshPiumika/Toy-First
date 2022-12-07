@@ -4,6 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".AdminSignIn">
 
+    <EditText
+        android:id="@+id/txtAdminUsername"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="93dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Admin's Username"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+    <EditText
+        android:id="@+id/txtAdminPassword"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="97dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="94dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Admin's Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdminUsername" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="182dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/outline_admin_panel_settings_black_24dp" />
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="176dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="178dp"
+        android:minHeight="48dp"
+        android:onClick="goToHome"
+        android:text="Back to Home"
+        android:textAlignment="center"
+        android:textColor="@color/Theme"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.468"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button5"
+        android:layout_width="212dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginEnd="101dp"
+        android:background="@drawable/buttonstartup"
+        android:onClick="GoToCategoryPart"
+        android:text="Manage Cateogories"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdminPassword" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button6"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="134dp"
+        android:background="@drawable/buttonstartup"
+        android:onClick="GoToToysHandling"
+        android:text="Manage Toys"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button8"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="138dp"
+        android:background="@drawable/buttonstartup"
+        android:onClick="ViewUserOrders"
+        android:text="View Orders"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
 </androidx.constraintlayout.widget.ConstraintLayout>

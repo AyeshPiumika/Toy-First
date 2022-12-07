@@ -4,6 +4,195 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".ManageToys">
 
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="145dp"
+        android:text="Manage Toys"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgToy"
+        android:layout_width="130dp"
+        android:layout_height="119dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:srcCompat="@drawable/addimg" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSelectToyImg"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="38dp"
+        android:background="@drawable/buttonstartup"
+        android:onClick="selectImage"
+        android:text="Select Image"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imgToy"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <EditText
+        android:id="@+id/txtToyName"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="103dp"
+        android:layout_marginTop="31dp"
+        android:layout_marginEnd="88dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Toy Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgToy" />
+
+    <EditText
+        android:id="@+id/txtToyCategory"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="87dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Category"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtToyName" />
+
+    <EditText
+        android:id="@+id/txtToyPrice"
+        android:layout_width="220dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="87dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="Price (Rs)"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtToyCategory" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnInsertToy"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="59dp"
+        android:background="@drawable/button"
+        android:onClick="insertToy"
+        android:text="Insert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtToyPrice" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFindToy"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button"
+        android:onClick="findToy"
+        android:text="Find"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnInsertToy"
+        app:layout_constraintTop_toBottomOf="@+id/txtToyPrice" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnUpdateToy"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/button"
+        android:onClick="updateToy"
+        android:text="Update"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInsertToy" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDeleteToy"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/button"
+        android:onClick="deleteToy"
+        android:text="Delete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnUpdateToy"
+        app:layout_constraintTop_toBottomOf="@+id/btnFindToy" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnViewToys"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="130dp"
+        android:background="@drawable/button"
+        android:onClick="viewAllToys"
+        android:text="View Toys"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdateToy" />
+
+    <EditText
+        android:id="@+id/txtTID"
+        android:layout_width="79dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="37dp"
+        android:background="@drawable/text"
+        android:elevation="3dp"
+        android:ems="10"
+        android:hint="TID"
+        android:inputType="textPersonName"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="15dp"
+        android:text="Not for Insert"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/txtTID"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
 </androidx.constraintlayout.widget.ConstraintLayout>
